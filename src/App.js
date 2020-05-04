@@ -73,21 +73,26 @@ class App extends Component {
     } else {
       return (
         <>
-          <Logo />
-          <SearchPanel
-            countries={globalStatistics}
-            handleCountryChange={this.handleCountryChange}
-            searchStats={this.searchStats}
-            chosenCountry={chosenCountry}
-          />
-          {currentCountryStats.length ? (
-            <Stats
-              currentCountryStats={currentCountryStats}
-              handleBackButton={this.handleBackButton}
+          <div className="app">
+            <Logo handleBackButton={this.handleBackButton} />
+            <SearchPanel
+              countries={globalStatistics}
+              handleCountryChange={this.handleCountryChange}
+              searchStats={this.searchStats}
+              chosenCountry={chosenCountry}
             />
-          ) : (
-            <GlobalStats globalStats={this.state.globalStatistics.Global} />
-          )}
+            {currentCountryStats.length ? (
+              <Stats
+                currentCountryStats={currentCountryStats}
+                handleBackButton={this.handleBackButton}
+              />
+            ) : (
+              <>
+                <h2>Global</h2>
+                <GlobalStats globalStats={this.state.globalStatistics.Global} />
+              </>
+            )}
+          </div>
         </>
       );
     }

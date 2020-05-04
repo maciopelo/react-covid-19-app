@@ -80,13 +80,13 @@ const Stats = ({ currentCountryStats, handleBackButton }) => {
 
   const options = {
     responsive: true,
-
     legend: {
       position: "top",
       labels: {
-        padding: 10,
-        fontSize: 14,
-        boxWidth: 30,
+        align: "center",
+        padding: 20,
+        fontSize: 18,
+        fontColor: "black",
       },
     },
     maintainAspectRatio: false,

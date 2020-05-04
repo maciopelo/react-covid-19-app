@@ -15,21 +15,47 @@ const GlobalStats = ({ globalStats }) => {
     ],
   };
 
+  // const options = {
+  //   responsive: true,
+
+  //   legend: {
+  //     position: "bottom",
+  //     labels: {
+  //       padding: 50,
+  //       fontSize: 10,
+  //     },
+  //   },
+  //   plugins: {
+  //     labels: {
+  //       render: "value",
+  //       fontColor: "black",
+  //       fontSize: 15,
+  //       position: "border",
+  //       fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+  //       fontStyle: "normal",
+  //     },
+  //   },
+
+  // };
+
   const options = {
     responsive: true,
-
     legend: {
       position: "bottom",
       labels: {
-        padding: 50,
-        fontSize: 20,
+        align: "center",
+        padding: 20,
+        fontSize: 18,
+        fontColor: "black",
       },
     },
     plugins: {
       labels: {
+        padding: 15,
         render: "value",
         fontColor: "black",
-        fontSize: 15,
+        fontSize: 18,
+        shadowBlur: 10,
         position: "border",
         fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
         fontStyle: "normal",
